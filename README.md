@@ -1,161 +1,154 @@
 <div align="center">
 
-# 🧬 Clinical Trial Data Standardization Using SAS and CDISC SDTM
+# Clinical Trial Data Standardization Using SAS and CDISC SDTM
+
+### End-to-End Clinical SAS Programming Project
 
 ![SAS](https://img.shields.io/badge/SAS-Programming-blue)
 ![CDISC](https://img.shields.io/badge/CDISC-SDTM-success)
 ![Clinical Trials](https://img.shields.io/badge/Clinical-Trials-green)
 ![Portfolio](https://img.shields.io/badge/Project-Portfolio-orange)
 
-*A hands-on Clinical SAS project demonstrating clinical trial data standardization using SAS and CDISC SDTM standards.*
+**A hands-on Clinical SAS project demonstrating SDTM programming, clinical data
+standardization, QC, validation, and clinical trial reporting using SAS.**
 
 </div>
 
 ---
 
-# 📖 Project Overview
+## 📖 Project Overview
 
-This project demonstrates a **Clinical SAS Programming workflow** for converting raw clinical trial data into standardized **CDISC SDTM (Study Data Tabulation Model)** datasets.
+This project demonstrates an end-to-end **Clinical SAS programming workflow** for
+standardizing clinical trial data according to **CDISC SDTM standards**.
 
-The project follows a structured programming workflow covering raw data import, SDTM mapping, SAS programming, dataset development, validation, quality control, and clinical trial reporting outputs.
+The project covers the transformation of raw clinical trial data into
+standardized SDTM domains using SAS programming techniques, followed by
+quality control, validation, and generation of clinical trial outputs.
 
-The project is designed to demonstrate practical experience with **Base SAS, PROC SQL, CDISC SDTM, SDTM variable mapping, data validation, and clinical trial data processing**.
+The project also demonstrates the transition from standardized clinical data
+to analysis-oriented reporting outputs, including a **Subject Demographics
+Listing** and a **Demographics and Baseline Characteristics Table**.
 
 ---
 
-# 🎯 Project Objectives
+## 🎯 Project Objectives
 
-- Convert raw clinical trial data into standardized SDTM datasets
-- Follow CDISC SDTM Implementation Guide (SDTMIG 3.3)
-- Perform SDTM variable mapping and derivations
-- Develop clinical trial datasets using Base SAS
-- Apply controlled terminology and standard formats
-- Perform data quality checks and validation
+- Standardize raw clinical trial data using CDISC SDTM principles
+- Develop SDTM domains using Base SAS
+- Apply variable mapping and derivation logic
+- Perform clinical data transformations and date derivations
+- Create subject-level identifiers and treatment-related variables
+- Perform dataset-level QC and validation checks
 - Generate clinical trial listings and tables
-- Demonstrate an industry-style Clinical SAS programming workflow
+- Demonstrate an organized and reusable Clinical SAS programming workflow
 
 ---
 
-# 📂 Project Structure
+## 🔄 Clinical SAS Programming Workflow
 
 ```text
-Clinical-Trial-Data-Standardization
-│
-├── 01_Project_Setup
-│   └── setup.sas
-│
-├── 02_Raw_Data
-│   ├── RAW_DM.xlsx
-│   ├── RAW_AE.xlsx
-│   └── Supporting Raw Data
-│
-├── 03_SDTM_Specifications
-│
-├── 04_Programs
-│   ├── DM.sas
-│   ├── AE.sas
-│   └── Supporting SAS Programs
-│
-├── 05_SDTM
-│   ├── DM
-│   ├── AE
-│   ├── CM
-│   ├── DS
-│   └── EX
-│
-├── 06_ADaM
-│   └── ADSL
-│
-├── 07_TLF
-│   ├── L1_Subject_Demographics.sas
-│   └── T1_Demographics.sas
-│
-├── 08_QC
-│
-├── 09_Output
-│
-├── 10_Logs
-│
-└── README.md
-📊 SDTM Domains
-Domain	Description
-DM	Demographics
-AE	Adverse Events
-CM	Concomitant Medications
-DS	Disposition
-EX	Exposure
-🔄 Programming Workflow
 Raw Clinical Trial Data
-        │
-        ▼
-Project Initialization
-        │
-        ▼
-Import Raw Data
-        │
-        ▼
-Review SDTM Specifications
-        │
-        ▼
-Variable Mapping
-        │
-        ▼
-SAS Programming & Derivations
-        │
-        ▼
-Create SDTM Domains
-        │
-        ▼
-Data Validation & QC
-        │
-        ▼
-ADaM / Reporting Data
-        │
-        ▼
-Clinical Trial Listings & Tables
-👤 DM – Demographics
+          │
+          ▼
+     Project Setup
+          │
+          ▼
+    Raw Data Import
+          │
+          ▼
+   Data Review & Mapping
+          │
+          ▼
+    SAS Programming
+          │
+          ▼
+    SDTM Domain Creation
+          │
+          ▼
+    Derivations & Merging
+          │
+          ▼
+       QC / Validation
+          │
+          ▼
+    Final SDTM Datasets
+          │
+          ▼
+   Analysis/Reporting Data
+          │
+          ▼
+   Listings & Tables
+📊 SDTM Programming
+DM — Demographics
 
-The DM (Demographics) domain was developed using Base SAS and CDISC SDTM standards.
+The DM programming workflow includes:
 
-Key programming activities included:
-
-Importing raw demographic data using PROC IMPORT
-Creating the DM base dataset
-Mapping raw variables to SDTM variables
-Deriving subject-level identifiers
-Deriving reference period dates
-Deriving planned and actual treatment variables
-Deriving first and last exposure dates
-Deriving disposition and death-related variables
-Applying ISO 8601 date formats
-Creating the final SDTM DM dataset
-Performing subject-level data validation and QC
-DM Validation Checks
-Observation count
-Unique subject count
-Duplicate subject check
-Missing required identifiers
-Missing important dates
+Raw DM data import using PROC IMPORT
+Creation of a DM base dataset
+Selection and standardization of DM variables
+Derivation of DOMAIN
+Derivation of reference dates
+Derivation of planned treatment variables
+Derivation of actual treatment variables
+Derivation of first exposure date
+Derivation of last exposure date
+Derivation of reference end date
+Derivation of death variables
+Merging of intermediate datasets
+Creation of the final SDTM.DM dataset
+Final metadata review using PROC CONTENTS
+Observation count QC
+Unique subject QC
+Duplicate subject QC
+Required identifier checks
+Missing date checks
 Date consistency checks
-Review of sample records
-⚠️ AE – Adverse Events
 
-The AE (Adverse Events) domain was programmed using Base SAS and SDTM standards.
+The final DM programming includes variables such as:
 
-Key programming activities included:
+STUDYID
+DOMAIN
+USUBJID
+SUBJID
+RFSTDTC
+RFENDTC
+RFXSTDTC
+RFXENDTC
+RFPENDTC
+RFICDTC
+BRTHDTC
+AGE
+AGEU
+SEX
+RACE
+ETHNIC
+ARMCD
+ARM
+ACTARMCD
+ACTARM
+DTHFL
+DTHDTC
+AE — Adverse Events
 
-Importing raw adverse event data
-Creating the AE base dataset
-Mapping AE variables to SDTM variables
-Merging subject reference information from DM
-Deriving adverse event start and end dates
-Deriving study day variables
-Creating exposure reference dates
-Deriving EPOCH based on study periods
-Applying SDTM terminology and variable structure
-Creating the final SDTM AE dataset
-Performing dataset review and validation
-Key AE Variables
+The AE programming workflow demonstrates:
+
+Raw AE data import
+Creation and review of the AE base dataset
+Referencing SDTM DM information
+Sorting and merging datasets by USUBJID
+Conversion of character dates into SAS dates
+Derivation of AESTDY
+Derivation of AEENDY
+Creation of an exposure reference dataset
+Derivation of first and last exposure dates
+EPOCH derivation
+Seriousness-related variable derivations
+Creation of the final SDTM.AE dataset
+Final dataset metadata review
+Output validation
+
+Examples of programmed AE variables include:
+
 STUDYID
 DOMAIN
 USUBJID
@@ -173,119 +166,254 @@ AEREL
 AEOUT
 AEACN
 AEENRF
+AESDISAB
+AESDTH
+AESHOSP
+AESLIFE
+AESCONG
+AESMIE
 EPOCH
 📋 Clinical Trial Reporting
+Listing 1 — Subject Demographics
 
-The project also includes clinical trial reporting outputs using ADaM ADSL.
+A subject-level demographics listing was programmed using an analysis dataset.
 
-Listing 1 – Subject Demographics
+The listing includes:
 
-Created a subject-level demographic listing using the ITT population.
-
-Variables included:
-
-Subject ID
 Treatment
+Subject ID
 Age
 Age Group
 Sex
 Race
 Ethnicity
 
-The listing was generated using PROC REPORT and reviewed using QC checks and PROC COMPARE.
+The workflow includes:
 
-Table 1 – Demographics and Baseline Characteristics
+ADSL
+  │
+  ▼
+ITT Population Selection
+  │
+  ▼
+Subject Demographics Dataset
+  │
+  ▼
+Sorting by Treatment and Subject
+  │
+  ▼
+Final Variable Ordering
+  │
+  ▼
+PROC REPORT
+  │
+  ▼
+Subject Demographics Listing
 
-Created a demographic and baseline characteristics table using ADSL.
+QC includes comparison of the final listing dataset against the source
+analysis dataset using PROC COMPARE.
 
-The table includes summaries for:
+📊 Table 1 — Demographics and Baseline Characteristics
 
-Age
+A demographics and baseline characteristics table was programmed using an
+analysis dataset.
+
+The table summarizes:
+
 Age Group
 Sex
 Race
 Ethnicity
 
-The output was generated using SAS procedures including PROC FREQ, PROC TRANSPOSE, and PROC REPORT.
+The programming workflow includes:
 
-🛠 Technologies Used
+ITT population selection
+Frequency summaries using PROC FREQ
+Treatment-level summaries
+Overall summaries
+Calculation of counts and percentages
+Creation of N (%) formatted values
+Transposition using PROC TRANSPOSE
+Construction of table components
+Combination of table components
+Final table structure
+QC checks
+Final report generation using PROC REPORT
+
+The final output is structured by:
+
+Characteristic
+    └── Level
+          ├── Treatment 1
+          ├── Treatment 2
+          └── Total
+🛠️ SAS Programming Techniques Used
 Base SAS
-SAS Studio
-SAS OnDemand for Academics
 DATA Step Programming
-PROC SQL
+SET Statement
+MERGE Statement
+BY-Group Processing
+IF/THEN/ELSE Logic
+Variable Derivation
+Character Functions
+Date Functions
+Formats and Labels
+KEEP / DROP
+RETAIN
+INPUT Function
+IFN / IFC Functions
+SAS Procedures
 PROC IMPORT
 PROC SORT
+PROC SQL
+PROC CONTENTS
+PROC PRINT
 PROC FREQ
 PROC TRANSPOSE
 PROC REPORT
 PROC COMPARE
-SAS Formats
+Clinical SAS
+Clinical Trial Data Processing
+CDISC SDTM
+SDTM Variable Mapping
+SDTM Domain Programming
+Reference Date Derivations
+Study Day Derivations
+Treatment Variable Derivations
+Clinical Data QC
+Dataset Validation
+Clinical Trial Listings
+Clinical Trial Tables
+📁 Project Organization
+Clinical-SAS-Project
+│
+├── 01_Project_Setup
+│   └── setup.sas
+│
+├── 02_Raw_Data
+│   ├── RAW_DM
+│   ├── RAW_AE
+│   └── Other Raw Clinical Data
+│
+├── 03_SDTM_Specifications
+│
+├── 04_Programs
+│   ├── DM.sas
+│   ├── AE.sas
+│   └── Other SAS Programs
+│
+├── 05_QC
+│
+├── 06_Output
+│   ├── SDTM.DM
+│   ├── SDTM.AE
+│   └── Other SDTM Domains
+│
+├── 07_Validation
+│
+├── 08_Documentation
+│
+├── 09_Logs
+│
+├── 10_Formats
+│
+├── 11_Macros
+│
+├── 12_Metadata
+│
+├── 13_ADAM
+│
+└── README.md
+
+The project setup program establishes reusable SAS libraries for RAW, SDTM,
+QC, metadata, formats and ADaM data, providing a structured programming
+environment.
+
+🔍 Quality Control & Validation
+
+QC activities demonstrated in the project include:
+
+Dataset QC
+Observation counts
+Unique subject counts
+Duplicate subject checks
+Missing required identifiers
+Missing important dates
+Date consistency checks
+Variable metadata review
+Clinical Data Validation
+Source-to-output checks
+Review of derived variables
+Review of date derivations
+Treatment-level frequency checks
+Listing row and subject counts
+Source-to-listing comparison using PROC COMPARE
+📚 CDISC Standards
+
+The project follows:
+
 CDISC SDTM
 SDTMIG 3.3
-ADaM
-ADSL
+CDISC-based SDTM variable structure
+Standardized domain programming principles
+💻 Technologies & Tools
+SAS 9.4
+SAS Studio
+SAS OnDemand for Academics
+Base SAS
+PROC SQL
 Microsoft Excel
 Git
 GitHub
-💡 Key Features
-Structured Clinical SAS project workflow
-Raw clinical data processing
-SDTM variable mapping
-SDTM domain programming
-Subject-level data derivations
-ISO 8601 date standardization
-Study day derivations
-Controlled terminology implementation
-Exposure and disposition reference data integration
-Data validation and QC
-ADaM ADSL-based reporting
-Clinical trial listings and tables
-GitHub-based project documentation
-📚 Skills Demonstrated
-Clinical Programming
+CDISC SDTM
+💡 Key Skills Demonstrated
+Clinical SAS
 Clinical SAS Programming
-Clinical Trial Data Processing
-CDISC Standards
 SDTM Programming
-SDTM Variable Mapping
-SDTM Domain Development
-ADaM
-ADSL
-TLF Programming
-Data Validation
-Quality Control
+SDTM Mapping
+Clinical Data Standardization
+Clinical Trial Data Processing
+Clinical Data QC
+Clinical Data Validation
 SAS Programming
+Base SAS
 DATA Step
 PROC SQL
-PROC IMPORT
 PROC SORT
+PROC IMPORT
 PROC FREQ
 PROC TRANSPOSE
 PROC REPORT
 PROC COMPARE
 SAS Functions
 Date Derivations
-Formats
+BY-Group Processing
 Dataset Merging
-Clinical Data Standards
-CDISC SDTM
-SDTMIG 3.3
-Controlled Terminology
-ISO 8601 Date Standards
-Clinical Trial Data Standardization
-Software & Version Control
-SAS Studio
-SAS OnDemand for Academics
-Microsoft Excel
-Git
-GitHub
-Project Documentation
-⚠ Disclaimer
+Clinical Reporting
+Subject-Level Listings
+Demographics Listings
+Demographics Tables
+Frequency Analysis
+N (%) Reporting
+TLF Programming
+📌 Project Highlights
+End-to-end clinical data standardization workflow
+SDTM DM domain development
+SDTM AE domain development
+Clinical data derivations
+Study-day calculations
+Treatment and exposure-related derivations
+Dataset-level QC
+Clinical output validation
+Subject demographics listing
+Demographics and baseline characteristics table
+Structured Clinical SAS project organization
+⚠️ Disclaimer
 
-This repository was developed for educational and portfolio purposes.
+This project is created for educational and portfolio purposes.
 
-The clinical datasets used in this project are simulated and do not contain any real patient information or confidential clinical trial data.
+The datasets used in the project are simulated and do not contain real patient
+information or confidential clinical trial data.
 
 👨‍💻 Author
 
@@ -296,5 +424,4 @@ Aspiring Clinical SAS Programmer
 📧 Email: abhijeethbagal09@gmail.com
 
 🔗 GitHub: https://github.com/abhijeethbagal
-
 ⭐ If you found this project useful, consider giving it a Star!
